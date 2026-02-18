@@ -1,0 +1,35 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Enterprise Resource Planning System interface",
+      "imageUrl": "https://picsum.photos/seed/101/800/600",
+      "imageHint": "software dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "Database optimization visualization",
+      "imageUrl": "https://picsum.photos/seed/102/800/600",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "project-3",
+      "description": "Network infrastructure map",
+      "imageUrl": "https://picsum.photos/seed/103/800/600",
+      "imageHint": "server network"
+    },
+    {
+      "id": "project-4",
+      "description": "Web application for logistics",
+      "imageUrl": "https://picsum.photos/seed/104/800/600",
+      "imageHint": "web application"
+    },
+    {
+      "id": "project-5",
+      "description": "Automated reporting tool with VBA",
+      "imageUrl": "https://picsum.photos/seed/105/800/600",
+      "imageHint": "excel automation"
+    }
+  ]
+}
