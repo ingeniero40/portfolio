@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -12,7 +11,6 @@ export function RecentActivity() {
 
   useEffect(() => {
     async function fetchActivity() {
-      // Mock data representing what might come from a GitHub API fetch
       const activities = [
         {
           repoName: 'hectorcruz/enterprise-portal',
@@ -38,12 +36,31 @@ export function RecentActivity() {
       ];
 
       try {
-        const results = await Promise.all(
-          activities.map(activity => automatedPortfolioUpdate(activity))
-        );
+        const results: AutomatedPortfolioUpdateOutput[] = [];
+        
+        // Process sequentially with a slight delay to respect free tier rate limits
+        for (const activity of activities) {
+          try {
+            const result = await automatedPortfolioUpdate(activity);
+            results.push(result);
+            // Wait 1 second between requests to be safe with concurrent limits
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          } catch (itemError) {
+            console.error("Error generating individual update:", itemError);
+            // Fallback for failed AI generation so the UI doesn't break
+            results.push({
+              title: `Update in ${activity.repoName.split('/')[1]}`,
+              description: activity.commitMessage,
+              link: activity.commitUrl,
+              category: 'Other',
+              displayDate: new Date(activity.commitDate).toLocaleDateString()
+            });
+          }
+        }
+        
         setUpdates(results);
       } catch (error) {
-        console.error("Error generating portfolio updates:", error);
+        console.error("Critical error in activity processing:", error);
       } finally {
         setLoading(false);
       }

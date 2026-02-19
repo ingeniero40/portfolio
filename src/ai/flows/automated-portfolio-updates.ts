@@ -65,10 +65,32 @@ const automatedPortfolioUpdateFlow = ai.defineFlow(
     outputSchema: AutomatedPortfolioUpdateOutputSchema,
   },
   async (input) => {
-    const { output } = await prompt(input);
-    if (!output) {
-      throw new Error('Failed to generate portfolio update card.');
+    const maxRetries = 3;
+    let lastError;
+
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        const { output } = await prompt(input);
+        if (!output) {
+          throw new Error('Failed to generate portfolio update card.');
+        }
+        return output;
+      } catch (error: any) {
+        lastError = error;
+        // Check for rate limit error (429 / RESOURCE_EXHAUSTED)
+        const isRateLimit = error.message?.includes('429') || 
+                          error.message?.includes('RESOURCE_EXHAUSTED') ||
+                          error.status === 429;
+        
+        if (isRateLimit && i < maxRetries - 1) {
+          // Exponential backoff: 2s, 4s, 8s...
+          const delay = Math.pow(2, i + 1) * 1000;
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+        throw error;
+      }
     }
-    return output;
+    throw lastError;
   }
 );
