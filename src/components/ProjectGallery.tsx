@@ -9,44 +9,45 @@ import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
 import { ExternalLink, Layers } from 'lucide-react';
 
-const projects = [
-  {
-    id: 'p1',
-    title: 'ERP Custom Solutions',
-    category: 'Full Stack',
-    image: PlaceHolderImages[0].imageUrl,
-    hint: PlaceHolderImages[0].imageHint,
-    details: 'Desarrollo de un sistema de planificación de recursos empresariales a medida utilizando PHP y PostgreSQL para una logística eficiente.'
-  },
-  {
-    id: 'p2',
-    title: 'Postgres Tuner Pro',
-    category: 'Database',
-    image: PlaceHolderImages[1].imageUrl,
-    hint: PlaceHolderImages[1].imageHint,
-    details: 'Algoritmo de optimización de queries y balanceo de carga para bases de datos transaccionales de alto tráfico.'
-  },
-  {
-    id: 'p3',
-    title: 'InfraSec Audit Tool',
-    category: 'Security',
-    image: PlaceHolderImages[2].imageUrl,
-    hint: PlaceHolderImages[2].imageHint,
-    details: 'Panel de control para auditorías de seguridad en redes locales y administración de Active Directory.'
-  },
-  {
-    id: 'p4',
-    title: 'Supply Chain Tracker',
-    category: 'Web App',
-    image: PlaceHolderImages[3].imageUrl,
-    hint: PlaceHolderImages[3].imageHint,
-    details: 'Dashboard interactivo para el monitoreo en tiempo real de suministros y envíos internacionales.'
-  }
-];
-
 export function ProjectGallery() {
   const [filter, setFilter] = useState('Todos');
   const categories = ['Todos', 'Full Stack', 'Database', 'Security', 'Web App'];
+
+  // Defensive data fetching for projects
+  const projects = [
+    {
+      id: 'p1',
+      title: 'ERP Custom Solutions',
+      category: 'Full Stack',
+      image: PlaceHolderImages.find(img => img.id === 'project-1')?.imageUrl || '',
+      hint: PlaceHolderImages.find(img => img.id === 'project-1')?.imageHint || 'software',
+      details: 'Desarrollo de un sistema de planificación de recursos empresariales a medida utilizando PHP y PostgreSQL para una logística eficiente.'
+    },
+    {
+      id: 'p2',
+      title: 'Postgres Tuner Pro',
+      category: 'Database',
+      image: PlaceHolderImages.find(img => img.id === 'project-2')?.imageUrl || '',
+      hint: PlaceHolderImages.find(img => img.id === 'project-2')?.imageHint || 'data',
+      details: 'Algoritmo de optimización de queries y balanceo de carga para bases de datos transaccionales de alto tráfico.'
+    },
+    {
+      id: 'p3',
+      title: 'InfraSec Audit Tool',
+      category: 'Security',
+      image: PlaceHolderImages.find(img => img.id === 'project-3')?.imageUrl || '',
+      hint: PlaceHolderImages.find(img => img.id === 'project-3')?.imageHint || 'network',
+      details: 'Panel de control para auditorías de seguridad en redes locales y administración de Active Directory.'
+    },
+    {
+      id: 'p4',
+      title: 'Supply Chain Tracker',
+      category: 'Web App',
+      image: PlaceHolderImages.find(img => img.id === 'project-4')?.imageUrl || '',
+      hint: PlaceHolderImages.find(img => img.id === 'project-4')?.imageHint || 'web',
+      details: 'Dashboard interactivo para el monitoreo en tiempo real de suministros y envíos internacionales.'
+    }
+  ];
 
   const filteredProjects = filter === 'Todos' ? projects : projects.filter(p => p.category === filter);
 
@@ -79,13 +80,15 @@ export function ProjectGallery() {
             <Dialog key={project.id}>
               <DialogTrigger asChild>
                 <Card className="group relative overflow-hidden bg-card border-border cursor-pointer aspect-video rounded-3xl">
-                  <Image 
-                    src={project.image} 
-                    alt={project.title} 
-                    fill 
-                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                    data-ai-hint={project.hint}
-                  />
+                  {project.image && (
+                    <Image 
+                      src={project.image} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      data-ai-hint={project.hint}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
                   <div className="absolute bottom-0 left-0 p-8 space-y-2">
                     <Badge className="bg-primary hover:bg-primary text-white">{project.category}</Badge>
@@ -103,7 +106,7 @@ export function ProjectGallery() {
                 </DialogHeader>
                 <div className="mt-4 space-y-6">
                   <div className="relative aspect-video rounded-2xl overflow-hidden border border-border">
-                    <Image src={project.image} alt={project.title} fill className="object-cover" />
+                    {project.image && <Image src={project.image} alt={project.title} fill className="object-cover" />}
                   </div>
                   <div className="space-y-4">
                     <h5 className="text-xl font-bold">Descripción del Proyecto</h5>

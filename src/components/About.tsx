@@ -1,8 +1,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { getPlaceholderById } from '@/lib/placeholder-images';
 
 export function About() {
+  const profileImage = getPlaceholderById('hector-profile');
+
   return (
     <section id="about" className="py-24 bg-card border-y border-border">
       <div className="max-w-7xl mx-auto px-6">
@@ -10,11 +13,11 @@ export function About() {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative z-10">
               <Image 
-                src="https://picsum.photos/seed/hector/800/1000" 
+                src={profileImage.imageUrl} 
                 alt="Héctor Cruz" 
                 fill
                 className="object-cover"
-                data-ai-hint="professional headshot"
+                data-ai-hint={profileImage.imageHint}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-2xl -z-10" />
