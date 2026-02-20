@@ -4,7 +4,7 @@
     {
       "id": "hector-profile",
       "description": "Professional headshot of Héctor Cruz",
-      "imageUrl": "https://picsum.photos/seed/hector/800/1000",
+      "imageUrl": "/images/hector-profile.jpg",
       "imageHint": "professional headshot"
     },
     {
