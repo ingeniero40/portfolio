@@ -22,7 +22,8 @@ export function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-2xl -z-10" />
             <div className="absolute -top-6 -left-6 bg-primary w-24 h-24 rounded-full flex items-center justify-center text-white font-bold text-center leading-tight">
-              Desde<br/>1993
+              Desde<br/>2007
+              
             </div>
           </div>
           
