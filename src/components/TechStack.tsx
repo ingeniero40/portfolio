@@ -7,7 +7,7 @@ const stacks = [
   {
     category: 'Desarrollo Web',
     icon: <Layout className="w-8 h-8 text-primary" />,
-    skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'PHP', 'VBA'],
+    skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'PHP', 'Python'],
   },
   {
     category: 'Bases de Datos',
@@ -17,12 +17,12 @@ const stacks = [
   {
     category: 'Sistemas y Redes',
     icon: <Server className="w-8 h-8 text-primary" />,
-    skills: ['Windows/Linux Admin', 'Seguridad de Red', 'Monitoreo', 'ITIL V3 Support'],
+    skills: ['Windows/Linux Admin', 'Seguridad de Red', 'Monitoreo', 'ITIL V4 Support'],
   },
   {
     category: 'Herramientas Pro',
     icon: <PenTool className="w-8 h-8 text-accent" />,
-    skills: ['Excel Avanzado', 'Análisis de Datos', 'Automatización VBA'],
+    skills: ['Excel Avanzado', 'Análisis de Datos', 'Automatización IA'],
   },
 ];
 
