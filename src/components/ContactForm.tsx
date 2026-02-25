@@ -22,7 +22,7 @@ export function ContactForm() {
       setIsSubmitted(true);
       toast({
         title: "Mensaje enviado",
-        description: "Gracias por contactarme, Héctor te responderá pronto.",
+        description: "Gracias por contactarme, Héctor Cruz te responderá pronto.",
       });
     }, 1500);
   };

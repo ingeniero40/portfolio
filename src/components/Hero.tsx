@@ -24,7 +24,7 @@ export function Hero() {
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-center">
             Héctor Cruz <br />
-            <span className="text-primary">Ingeniero de IT</span> & <br />
+            <span className="text-primary">Profesional de IT</span> & <br />
             Software Dev
           </h1>
           

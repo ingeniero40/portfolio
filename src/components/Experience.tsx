@@ -15,7 +15,7 @@ const experiences = [
     subtext: '(vía Access Consulting)',
     role: 'Soporte especializado & Admin Servidores',
     icon: <Building2 className="w-10 h-10 text-accent" />,
-    description: 'Administración de servidores y ejecución de proyectos de infraestructura como "PC-Refresh".'
+    description: 'Administración de servidores y ejecución de proyectos de infraestructura.'
   },
   {
     company: 'Emcali & Bavaria',
@@ -37,7 +37,7 @@ export function Experience() {
               Colaborando con Organizaciones <span className="text-accent">Líderes</span>
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              He tenido el privilegio de colaborar como consultor y analista para organizaciones líderes a nivel global, gestionando servicios críticos y arquitecturas de red que sostienen operaciones masivas.
+              He tenido el privilegio de colaborar como consultor y analista para organizaciones líderes a nivel global, gestionando servicios críticos y arquitecturas de infraestructura que sostienen operaciones masivas.
             </p>
             
             <div className="pt-8 flex flex-wrap gap-8 items-center opacity-50 grayscale hover:grayscale-0 transition-all">
@@ -45,6 +45,8 @@ export function Experience() {
               <span className="text-2xl font-black italic tracking-widest uppercase">Mondelez</span>
               <span className="text-2xl font-black italic tracking-widest uppercase">Coca-Cola</span>
               <span className="text-2xl font-black italic tracking-widest uppercase">Bavaria</span>
+              <span className="text-2xl font-black italic tracking-widest uppercase">Icoltrans</span>
+              <span className="text-2xl font-black italic tracking-widest uppercase">Colombia Software</span>
             </div>
           </div>
 

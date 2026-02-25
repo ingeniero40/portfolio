@@ -41,7 +41,7 @@ export function About() {
             <div className="lg:col-span-7 space-y-8 text-left">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Soy <span className="text-foreground font-semibold">Tecnólogo en Análisis y Desarrollo de Sistemas de Información (ADSI)</span> egresado del SENA, con una sólida trayectoria técnica iniciada en 1993. Mi enfoque combina la precisión del diagnóstico de hardware y redes con la agilidad del desarrollo web moderno en JavaScript, PHP y SQL.
+                  Soy <span className="text-foreground font-semibold">Profesional en Análisis y Desarrollo de Sistemas de Información (ADSI)</span> egresado SENA, con una sólida trayectoria técnica iniciada en 2007. Mi enfoque combina la precisión del diagnóstico de hardware y redes con la agilidad del desarrollo web moderno en JavaScript, PHP, SQL y Python.
                 </p>
                 <p>
                   A lo largo de mi carrera, he demostrado una alta adaptabilidad al cambio y un compromiso con el aprendizaje continuo, lo que me permite enfrentar retos bajo presión y liderar procesos de transformación digital en empresas de alto nivel.
@@ -50,11 +50,11 @@ export function About() {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-border">
                 <div>
-                  <div className="text-3xl font-bold text-foreground">30+</div>
+                  <div className="text-3xl font-bold text-foreground">20+</div>
                   <div className="text-sm text-muted-foreground">Años de Trayectoria</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-foreground">50+</div>
+                  <div className="text-3xl font-bold text-foreground">20+</div>
                   <div className="text-sm text-muted-foreground">Proyectos Enterprise</div>
                 </div>
                 <div>
@@ -63,7 +63,7 @@ export function About() {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-foreground">100%</div>
-                  <div className="text-sm text-muted-foreground">Compromiso ITIL</div>
+                  <div className="text-sm text-muted-foreground">Compromiso ITIL V4</div>
                 </div>
               </div>
             </div>
