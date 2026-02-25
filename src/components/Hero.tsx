@@ -2,7 +2,7 @@
 "use client"
 
 import React from 'react';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
@@ -22,25 +22,25 @@ export function Hero() {
             Disponible para nuevos proyectos
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-center">
             Héctor Cruz <br />
             <span className="text-primary">Ingeniero de IT</span> & <br />
             Software Dev
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-medium mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-medium mx-auto text-center">
             Más de 10 años optimizando procesos tecnológicos y desarrollando soluciones robustas. 
             Especialista en Análisis de Sistemas, Bases de Datos y Soporte de Nivel 3.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full">
-            <Button size="lg" className="w-full sm:w-auto rounded-full bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg group">
-              <a href="#projects" className="flex items-center">
+            <Button size="lg" className="w-full sm:w-auto rounded-full bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg group" asChild>
+              <a href="#projects">
                 Ver mis proyectos
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full border-2 border-border hover:border-accent hover:bg-accent hover:text-secondary-foreground font-bold h-14 px-8 text-lg">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full border-2 border-border hover:border-accent hover:bg-accent hover:text-secondary-foreground font-bold h-14 px-8 text-lg" asChild>
               <a href="#contact">Contactar ahora</a>
             </Button>
           </div>
