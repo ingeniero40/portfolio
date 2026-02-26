@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -8,7 +7,7 @@ import { Button } from '@/components/ui/button';
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background">
-      {/* Decorative blobs */}
+      {/* Elementos decorativos */}
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-1/4 -left-20 w-72 h-72 bg-accent/10 rounded-full blur-[80px] -z-10" />
 
@@ -24,7 +23,7 @@ export function Hero() {
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-center">
             Héctor Cruz <br />
-            <span className="text-primary">Profesional de IT</span> & <br />
+            <span className="text-primary">Ingeniero de TI</span> & <br />
             Software Dev
           </h1>
           

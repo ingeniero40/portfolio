@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState } from 'react';
@@ -11,13 +10,12 @@ import { ExternalLink, Layers } from 'lucide-react';
 
 export function ProjectGallery() {
   const [filter, setFilter] = useState('Todos');
-  const categories = ['Todos', 'Full Stack', 'Database', 'Security', 'Web App'];
+  const categories = ['Todos', 'Full Stack', 'Bases de Datos', 'Seguridad', 'App Web'];
 
-  // Defensive data fetching for projects
   const projects = [
     {
       id: 'p1',
-      title: 'ERP Custom Solutions',
+      title: 'Soluciones ERP a Medida',
       category: 'Full Stack',
       image: PlaceHolderImages.find(img => img.id === 'project-1')?.imageUrl || '',
       hint: PlaceHolderImages.find(img => img.id === 'project-1')?.imageHint || 'software',
@@ -26,23 +24,23 @@ export function ProjectGallery() {
     {
       id: 'p2',
       title: 'Postgres Tuner Pro',
-      category: 'Database',
+      category: 'Bases de Datos',
       image: PlaceHolderImages.find(img => img.id === 'project-2')?.imageUrl || '',
       hint: PlaceHolderImages.find(img => img.id === 'project-2')?.imageHint || 'data',
-      details: 'Algoritmo de optimización de queries y balanceo de carga para bases de datos transaccionales de alto tráfico.'
+      details: 'Algoritmo de optimización de consultas y balanceo de carga para bases de datos transaccionales de alto tráfico.'
     },
     {
       id: 'p3',
-      title: 'InfraSec Audit Tool',
-      category: 'Security',
+      title: 'Auditoría InfraSec',
+      category: 'Seguridad',
       image: PlaceHolderImages.find(img => img.id === 'project-3')?.imageUrl || '',
       hint: PlaceHolderImages.find(img => img.id === 'project-3')?.imageHint || 'network',
-      details: 'Panel de control para auditorías de seguridad en redes locales y administración de Active Directory.'
+      details: 'Panel de control para auditorías de seguridad en redes locales y administración avanzada de Active Directory.'
     },
     {
       id: 'p4',
-      title: 'Supply Chain Tracker',
-      category: 'Web App',
+      title: 'Logistics Tracker',
+      category: 'App Web',
       image: PlaceHolderImages.find(img => img.id === 'project-4')?.imageUrl || '',
       hint: PlaceHolderImages.find(img => img.id === 'project-4')?.imageHint || 'web',
       details: 'Dashboard interactivo para el monitoreo en tiempo real de suministros y envíos internacionales.'
@@ -114,9 +112,9 @@ export function ProjectGallery() {
                       {project.details}
                     </p>
                     <div className="flex gap-4 pt-4">
-                      <Badge variant="outline" className="border-accent/50 text-accent">SENA Certificado</Badge>
-                      <Badge variant="outline" className="border-accent/50 text-accent">ITIL Standards</Badge>
-                      <Badge variant="outline" className="border-accent/50 text-accent">Performance Opt</Badge>
+                      <Badge variant="outline" className="border-accent/50 text-accent">Certificación SENA</Badge>
+                      <Badge variant="outline" className="border-accent/50 text-accent">Estándares ITIL</Badge>
+                      <Badge variant="outline" className="border-accent/50 text-accent">Optimización de Rendimiento</Badge>
                     </div>
                   </div>
                 </div>

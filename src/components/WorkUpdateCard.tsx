@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -16,6 +15,15 @@ const categoryIcons: Record<string, React.ReactNode> = {
   'Other': <HelpCircle className="w-4 h-4 text-primary" />,
 };
 
+const categoryLabels: Record<string, string> = {
+  'Feature': 'Funcionalidad',
+  'Bug Fix': 'Corrección',
+  'Refactor': 'Refactorización',
+  'Documentation': 'Documentación',
+  'Chore': 'Mantenimiento',
+  'Other': 'Otro',
+};
+
 export function WorkUpdateCard({ update }: { update: AutomatedPortfolioUpdateOutput }) {
   return (
     <Card className="bg-card border-border hover:border-accent/50 transition-all duration-300 group">
@@ -23,7 +31,7 @@ export function WorkUpdateCard({ update }: { update: AutomatedPortfolioUpdateOut
         <div className="flex justify-between items-start mb-2">
           <Badge variant="outline" className="flex items-center gap-1 bg-background/50 border-primary/20">
             {categoryIcons[update.category] || categoryIcons.Other}
-            <span>{update.category}</span>
+            <span>{categoryLabels[update.category] || 'Actualización'}</span>
           </Badge>
           <span className="text-xs text-muted-foreground">{update.displayDate}</span>
         </div>
