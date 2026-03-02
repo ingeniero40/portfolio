@@ -7,7 +7,7 @@ const experiences = [
     subtext: '(vía Focus on Solution)',
     role: 'Analista de procesos y Field Services',
     icon: <Globe className="w-10 h-10 text-primary" />,
-    description: 'Consultoría y análisis de servicios críticos y arquitecturas de red.'
+    description: 'Consultoría y análisis de servicios críticos en arquitecturas de IT.'
   },
   {
     company: 'Copa Airlines, Coca-Cola & Mondelez',

@@ -5,7 +5,7 @@ import { Code2, Database, ShieldCheck, Settings2 } from 'lucide-react';
 const services = [
   {
     title: 'Desarrollo de Aplicaciones Web',
-    desc: 'Creación de soluciones a medida utilizando PHP y frameworks modernos para entornos corporativos de alto rendimiento.',
+    desc: 'Creación de soluciones a medida utilizando PHP, Python con frameworks modernos para entornos corporativos de alto rendimiento.',
     icon: <Code2 className="w-10 h-10 text-primary" />
   },
   {
